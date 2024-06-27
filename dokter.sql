@@ -38,8 +38,8 @@ PRIMARY KEY (`id`)) ENGINE=InnoDB ;
 --
 
 INSERT INTO `dokter` (`id`, `nama`, `alamat`, `no_hp`) VALUES
-(1, '13174', 'RADHEN ADEBOS', 'KIARA CONDONG TENGAH', '08212121212'),
-(3, '13175', 'DINAR HARTO', 'BANDUNG', '081212312');
+(1, '13174', 'DR RADHEN ADEBOS', 'KIARA CONDONG TENGAH', '08212121212'),
+(3, '13175', 'DR DINAR HARTO', 'BANDUNG', '081212312');
 
 --
 -- Indexes for dumped tables
