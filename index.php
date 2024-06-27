@@ -43,12 +43,11 @@
         <tr>
        <table class="my-3 table table-bordered">
             <tr class="table-primary">           
-            <th>No</th>
-            <th>Nama</th>
-            <th>Sekolah</th>
-            <th>Jurusan</th>
+            <th>no</th>
+            <th>id</th>
+            <th>nama</th>
+            <th>alamat</th>
             <th>No Hp</th>
-            <th>Alamat</th>
             <th colspan='2'>Aksi</th>
 
         </tr>
@@ -67,11 +66,10 @@
             <tbody>
             <tr>
                 <td><?php echo $no;?></td>
-                <td><?php echo $data["nama"]; ?></td>
-                <td><?php echo $data["sekolah"];   ?></td>
-                <td><?php echo $data["jurusan"];   ?></td>
-                <td><?php echo $data["no_hp"];   ?></td>
+                <td><?php echo $data["id"]; ?></td>
+                <td><?php echo $data["nama"];   ?></td>
                 <td><?php echo $data["alamat"];   ?></td>
+                <td><?php echo $data["no_hp"];   ?></td>
                 <td>
                     <a href="update.php?id_peserta=<?php echo htmlspecialchars($data['id_peserta']); ?>" class="btn btn-warning" role="button">Update</a>
                     <a href="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>?id_peserta=<?php echo $data['id_peserta']; ?>" class="btn btn-danger" role="button">Delete</a>
