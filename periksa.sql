@@ -38,8 +38,8 @@ FOREIGN KEY (`id dokter` . `id pasien`)) ENGINE=InnoDB ;
 --
 
 INSERT INTO `periksa` (`id periksa`, `id dokter`, `alamat`, `no_hp`) VALUES
-(1, 'RADHEN ADEBOS', 'SMK BANDUNG 21', 'TKJ', '08212121212', 'KIARA CONDONG TENGAH'),
-(3, 'RADHEN ADEBOS', 'SMK PUTRA PAJAJARAN', 'MULTIMEDIA', '081212312', 'BANDUNG');
+(1, '13174', '13176', 'KIARA CONDONG TENGAH', '08212121212'),
+(3, '13175', '13177', 'BANDUNG', '081212312');
 
 --
 -- Indexes for dumped tables
