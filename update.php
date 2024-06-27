@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Form Pendaftaran Anggota</title>
+    <title>Form Pendaftaran</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
 </head>
@@ -34,19 +34,17 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $id_peserta=htmlspecialchars($_POST["id_peserta"]);
-        $nama=input($_POST["nama"]);
-        $sekolah=input($_POST["sekolah"]);
-        $jurusan=input($_POST["jurusan"]);
-        $no_hp=input($_POST["no_hp"]);
+        $nama=input($_POST["id"]);
+        $sekolah=input($_POST["nama"]);
         $alamat=input($_POST["alamat"]);
+        $no_hp=input($_POST["no_hp"]);
 
         //Query update data pada tabel anggota
         $sql="update peserta set
+			id='$id',
 			nama='$nama',
-			sekolah='$sekolah',
-			jurusan='$jurusan',
-			no_hp='$no_hp',
-			alamat='$alamat'
+			alamat='$alamat',
+			no_hp='$no_hp'
 			where id_peserta=$id_peserta";
 
         //Mengeksekusi atau menjalankan query diatas
@@ -69,25 +67,21 @@
 
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
         <div class="form-group">
-            <label>Nama:</label>
-            <input type="text" name="nama" class="form-control" placeholder="Masukan Nama" required />
+            <label>id:</label>
+            <input type="text" name="if" class="form-control" placeholder="Masukan ID" required />
 
         </div>
         <div class="form-group">
             <label>Sekolah:</label>
-            <input type="text" name="sekolah" class="form-control" placeholder="Masukan Nama Sekolah" required/>
-        </div>
-        <div class="form-group">
-            <label>Jurusan :</label>
-            <input type="text" name="jurusan" class="form-control" placeholder="Masukan Jurusan" required/>
-        </div>
-        <div class="form-group">
-            <label>No HP:</label>
-            <input type="text" name="no_hp" class="form-control" placeholder="Masukan No HP" required/>
+            <input type="text" name="name" class="form-control" placeholder="Masukan Nama" required/>
         </div>
         <div class="form-group">
             <label>Alamat:</label>
             <textarea name="alamat" class="form-control" rows="5"placeholder="Masukan Alamat" required></textarea>
+        </div>
+        <div class="form-group">
+            <label>No HP:</label>
+            <input type="text" name="no_hp" class="form-control" placeholder="Masukan No HP" required/>
         </div>
 
         <input type="hidden" name="id_peserta" value="<?php echo $data['id_peserta']; ?>" />
